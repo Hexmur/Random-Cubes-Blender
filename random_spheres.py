@@ -1,6 +1,3 @@
-# To make this add-on installable, create an extension with it:
-# https://docs.blender.org/manual/en/latest/advanced/extensions/getting_started.html
-
 bl_info = {
     "name": "Random Cubes",
     "author": "Hexmur (Mauro Alizzi)",
@@ -9,19 +6,14 @@ bl_info = {
     "description": "Adds randomly placed cubes",
 }
 
-
-
-
 import bpy
 from random import randint
 from bpy.types import (Panel, Operator)
-
 
 class ButtonOperator(bpy.types.Operator):
     """Tooltip"""
     bl_idname = "random.1"
     bl_label = "Simple Random Operator"
-
 
     def execute(self, context):
         for i in range(100):
@@ -66,3 +58,4 @@ def unregister():
 
 if __name__ == "__main__":
     register()
+
